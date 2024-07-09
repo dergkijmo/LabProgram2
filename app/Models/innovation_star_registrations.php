@@ -1,9 +1,14 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+use App\Http\Middleware\Authenticate;
+
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class innovation_star_registrations extends Model
 {
@@ -19,7 +24,11 @@ class innovation_star_registrations extends Model
     ];
 
     protected $table='innovation_star_registrations';
-    public $timestamps=true;
+
+
+
+
+
     protected $primaryKey='id';
 
     public static function id_cha($student_id)
